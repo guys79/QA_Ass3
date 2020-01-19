@@ -6,9 +6,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import System.Program;
 
+
+
 public class copyArrBU {
     private Program program= new Program();
-
+    // Returns copy of the array "arr"
     /**
      * This function will check the minValue function when the input is null
      */
@@ -58,5 +60,6 @@ public class copyArrBU {
 
     }
 
-
 }
+
+

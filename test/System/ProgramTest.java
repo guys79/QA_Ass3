@@ -530,7 +530,7 @@ public class ProgramTest {
     private int [] randomArray()
     {
         int size = 1 + this.rand.nextInt(this.BOUND);
-        return randomArray();
+        return randomArray(size);
     }
 
     /**
