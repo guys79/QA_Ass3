@@ -7,9 +7,9 @@ import static org.junit.Assert.assertTrue;
 
 public class copyArrTopDown {
 
-    private size_stab1 size_stab1= new size_stab1();
-    private size_stab2 size_stab2= new size_stab2();
-    private size_stab3 size_stab3= new size_stab3();
+    private SizeStabCopyArrWhenValidInput SizeStabCopyArrWhenValidInput = new SizeStabCopyArrWhenValidInput();
+    private SizeStabMaxValueIndexValidEmptyCheckAndCopyArrWhenEnpty SizeStabMaxValueIndexValidEmptyCheckAndCopyArrWhenEnpty = new SizeStabMaxValueIndexValidEmptyCheckAndCopyArrWhenEnpty();
+    private SizeStabCopyArrWhenNullAndMaxValueIndexNullCheck SizeStabCopyArrWhenNullAndMaxValueIndexNullCheck = new SizeStabCopyArrWhenNullAndMaxValueIndexNullCheck();
 
     /**
      * This function will check the copyArr function when the input is valid
@@ -22,7 +22,7 @@ public class copyArrTopDown {
         int size=5;
         try
         {
-            int [] arr = size_stab1.copyArr(array);
+            int [] arr = SizeStabCopyArrWhenValidInput.copyArr(array);
             assertTrue(arr != array);
             assertEquals(array.length,arr.length);
             for(int i=0;i<size;i++)
@@ -46,7 +46,7 @@ public class copyArrTopDown {
         boolean pass = true;
         try
         {
-            int [] arr = size_stab3.copyArr(null);
+            int [] arr = SizeStabCopyArrWhenNullAndMaxValueIndexNullCheck.copyArr(null);
             assertTrue(arr ==null);
         }
         catch(Exception e)
@@ -65,7 +65,7 @@ public class copyArrTopDown {
         int [] array = {};
         try
         {
-            int [] arr = size_stab2.copyArr(array);
+            int [] arr = SizeStabMaxValueIndexValidEmptyCheckAndCopyArrWhenEnpty.copyArr(array);
             assertTrue(arr !=null);
             assertEquals(array.length,arr.length);
 

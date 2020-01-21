@@ -6,10 +6,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class swapMinMaxTopDown {
-    private minValueIndex_copyArr_maxValue_stab1 minValueIndex_copyArr_maxValue_stab1= new minValueIndex_copyArr_maxValue_stab1();
-    private minValueIndex_copyArr_maxValue_stab2 minValueIndex_copyArr_maxValue_stab2= new minValueIndex_copyArr_maxValue_stab2();
-    private minValueIndex_copyArr_maxValue_stab3 minValueIndex_copyArr_maxValue_stab3= new minValueIndex_copyArr_maxValue_stab3();
-    private minValueIndex_copyArr_maxValue_stab4 minValueIndex_copyArr_maxValue_stab4= new minValueIndex_copyArr_maxValue_stab4();
+    private MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenValidCheckarray minValueIndexCopyArrMaxValueStabSwapMinMaxWhenValidCheckarray = new MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenValidCheckarray();
+    private MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenValidCheckarray2 MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenValidCheckarray2 = new MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenValidCheckarray2();
+    private MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenNull MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenNull = new MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenNull();
+    private MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenEmpty MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenEmpty = new MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenEmpty();
     /**
      * This function will check the swapMinMax function when the input is valid
      */
@@ -21,7 +21,7 @@ public class swapMinMaxTopDown {
         int [] array2 = {1,5,4,3,2,6};
         try
         {
-            int [] arr = minValueIndex_copyArr_maxValue_stab1.swapMinMax(array);
+            int [] arr = minValueIndexCopyArrMaxValueStabSwapMinMaxWhenValidCheckarray.swapMinMax(array);
             assertTrue(arr !=null);
             assertEquals(array.length,arr.length);
 
@@ -33,7 +33,7 @@ public class swapMinMaxTopDown {
                 assertEquals(array[i],arr[i]);
             }
 
-            arr = minValueIndex_copyArr_maxValue_stab2.swapMinMax(array2);
+            arr = MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenValidCheckarray2.swapMinMax(array2);
             assertTrue(arr !=null);
             assertEquals(array2.length,arr.length);
 
@@ -65,7 +65,7 @@ public class swapMinMaxTopDown {
         boolean pass = true;
         try
         {
-            int [] arr = minValueIndex_copyArr_maxValue_stab3.swapMinMax(null);
+            int [] arr = MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenNull.swapMinMax(null);
             assertTrue(arr ==null);
         }
         catch(Exception e)
@@ -86,7 +86,7 @@ public class swapMinMaxTopDown {
         int [] array = {};
         try
         {
-            int [] arr = minValueIndex_copyArr_maxValue_stab4.swapMinMax(array);
+            int [] arr = MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenEmpty.swapMinMax(array);
             assertTrue(arr ==null);
 
 

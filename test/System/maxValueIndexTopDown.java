@@ -5,12 +5,12 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class maxValueIndex {
+public class maxValueIndexTopDown {
 
-    private size_stab4 size_stab4= new size_stab4();
-    private size_stab2 size_stab2= new size_stab2();
-    private size_stab3 size_stab3= new size_stab3();
-    private size_stab5 size_stab5= new size_stab5();
+    private SizeStabMaxValueIndexValidCheck SizeStabMaxValueIndexValidCheck = new SizeStabMaxValueIndexValidCheck();
+    private SizeStabMaxValueIndexValidEmptyCheckAndCopyArrWhenEnpty SizeStabMaxValueIndexValidEmptyCheckAndCopyArrWhenEnpty = new SizeStabMaxValueIndexValidEmptyCheckAndCopyArrWhenEnpty();
+    private SizeStabCopyArrWhenNullAndMaxValueIndexNullCheck SizeStabCopyArrWhenNullAndMaxValueIndexNullCheck = new SizeStabCopyArrWhenNullAndMaxValueIndexNullCheck();
+    private SizeStabMaxValueIndexValidSingleCheck SizeStabMaxValueIndexValidSingleCheck = new SizeStabMaxValueIndexValidSingleCheck();
 
 
     /**
@@ -21,7 +21,7 @@ public class maxValueIndex {
     {
         boolean pass = true;
         try {
-            size_stab3.maxValueIndex(null);
+            SizeStabCopyArrWhenNullAndMaxValueIndexNullCheck.maxValueIndex(null);
         }
         catch(Exception e)
         {
@@ -39,7 +39,7 @@ public class maxValueIndex {
     {
         int [] arr = {3,4,2,1};
         int index;
-        index = size_stab4.maxValueIndex(arr);
+        index = SizeStabMaxValueIndexValidCheck.maxValueIndex(arr);
         assertEquals(1,index);
     }
 
@@ -51,7 +51,7 @@ public class maxValueIndex {
     {
         int [] arr = {};
         int index;
-        index = size_stab2.maxValueIndex(arr);
+        index = SizeStabMaxValueIndexValidEmptyCheckAndCopyArrWhenEnpty.maxValueIndex(arr);
         assertEquals(-1,index);
     }
     /**
@@ -62,7 +62,7 @@ public class maxValueIndex {
     {
         int [] arr = {7};
         int index;
-        index = size_stab5.maxValueIndex(arr);
+        index = SizeStabMaxValueIndexValidSingleCheck.maxValueIndex(arr);
         assertEquals(0,index);
     }
 

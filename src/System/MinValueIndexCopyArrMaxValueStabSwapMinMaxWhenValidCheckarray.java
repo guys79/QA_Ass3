@@ -1,6 +1,6 @@
 package System;
 
-public class minValueIndex_copyArr_maxValue_stab1 extends Program{
+public class MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenValidCheckarray extends Program{
 
     // Returns copy of the array "arr"
     public  int[] copyArr(int[] arr) {
@@ -10,11 +10,12 @@ public class minValueIndex_copyArr_maxValue_stab1 extends Program{
 
     // Returns index of the minimum value in the array
     // Returns -1 if array is empty
+    // returns 5
     public  int minValueIndex(int[] arr) {
        return 5;
         }
 
-     //Returns the maximum value in the array
+     //Returns the maximum value in the array witch is 6 in this case
     public  int maxValue(int[] arr) {
        return 6;
     }

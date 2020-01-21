@@ -8,8 +8,8 @@ import static org.junit.Assert.assertTrue;
 public class sumMinMaxTopDown {
 
 
-    private minValue_maxValue_stab1 minValue_maxValue_stab1= new minValue_maxValue_stab1();
-    private minValue_maxValue_stab2 minValue_maxValue_stab2= new minValue_maxValue_stab2();
+    private MinValueMaxValueStabSumMinMaxWhenNullAndSumMinMaxWhenEmpty MinValueMaxValueStabSumMinMaxWhenNullAndSumMinMaxWhenEmpty = new MinValueMaxValueStabSumMinMaxWhenNullAndSumMinMaxWhenEmpty();
+    private MinValueMaxValueStabSumMinMaxValidInput MinValueMaxValueStabSumMinMaxValidInput = new MinValueMaxValueStabSumMinMaxValidInput();
 
     /**
      * This function will check the sumMinMax function when the input is null
@@ -21,7 +21,7 @@ public class sumMinMaxTopDown {
         try
         {
             int [] arr = null;
-            int value = minValue_maxValue_stab1.sumMinMax(arr);
+            int value = MinValueMaxValueStabSumMinMaxWhenNullAndSumMinMaxWhenEmpty.sumMinMax(arr);
         }
         catch(Exception e)
         {
@@ -40,7 +40,7 @@ public class sumMinMaxTopDown {
         try
         {
             int [] arr = {};
-            int value = minValue_maxValue_stab1.sumMinMax(arr);
+            int value = MinValueMaxValueStabSumMinMaxWhenNullAndSumMinMaxWhenEmpty.sumMinMax(arr);
         }
         catch(Exception e)
         {
@@ -56,7 +56,7 @@ public class sumMinMaxTopDown {
     public void sumMinMaxValidInput()
     {
         int [] arr = {4,3,2,1};
-        int value = minValue_maxValue_stab2.sumMinMax(arr);
+        int value = MinValueMaxValueStabSumMinMaxValidInput.sumMinMax(arr);
         assertEquals(5,value);
     }
 
