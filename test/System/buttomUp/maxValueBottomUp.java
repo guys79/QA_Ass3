@@ -1,26 +1,24 @@
 package System.buttomUp;
 
+import System.Program;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import System.Program;
 
 
-
-public class copyArrBU {
+public class maxValueBottomUp {
     private Program program= new Program();
-    // Returns copy of the array "arr"
     /**
-     * This function will check the minValue function when the input is null
+     * This function will check the maxValue function when the input is null
      */
     @Test
-    public void minValueWhenNull()
+    public void maxValueWhenNull()
     {
         boolean pass = true;
         try
         {
-            program.minValue(null);
+            program.maxValue(null);
         }
         catch(Exception e)
         {
@@ -30,27 +28,27 @@ public class copyArrBU {
     }
 
     /**
-     * This function will check the minValue function when the input is valid
+     * This function will check the maxValue function when the input is valid
      */
     @Test
-    public void minValueValidInput()
+    public void maxValueValidInput()
     {
         int [] arr = {4,3,2,1};
-        int value = program.minValue(arr);
-        assertEquals(1,value);
+        int value = program.maxValue(arr);
+        assertEquals(4,value);
     }
 
     /**
-     * This function will check the minValue function when the input is an empty array
+     * This function will check the maxValue function when the input is an empty array
      */
     @Test
-    public void minValueValidInputEmpty()
+    public void maxValueValidInputEmpty()
     {
         boolean pass= true;
         try
         {
             int [] arr = {};
-            int value = program.minValue(arr);
+            int value = program.maxValue(arr);
         }
         catch(Exception e)
         {
@@ -59,7 +57,4 @@ public class copyArrBU {
         assertTrue(pass);
 
     }
-
 }
-
-

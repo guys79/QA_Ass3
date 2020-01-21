@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 /**
  * This class is responsible for the unit testing of the class
  */
-public class ProgramTest {
+public class ProgramTestTopDown {
 
     private Random rand;// The random variable
     private final int BOUND = 100;//The bound

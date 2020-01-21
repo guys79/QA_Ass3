@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 
-public class swapMinMaxBU {
+public class swapMinMaxBottomUp {
     private Program program= new Program();
 
     /**

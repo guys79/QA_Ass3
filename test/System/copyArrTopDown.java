@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class copyArr{
+public class copyArrTopDown {
 
     private size_stab1 size_stab1= new size_stab1();
     private size_stab2 size_stab2= new size_stab2();

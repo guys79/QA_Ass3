@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class sumMinMax {
+public class sumMinMaxTopDown {
 
 
     private minValue_maxValue_stab1 minValue_maxValue_stab1= new minValue_maxValue_stab1();

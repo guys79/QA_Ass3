@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 
-public class printSortedBU {
+public class printArrBottomUp {
     private Program program= new Program();
     private Random rand;// The random variable
     private final int BOUND = 100;//The bound
@@ -58,6 +58,20 @@ public class printSortedBU {
             array[i] =  this.rand.nextInt(this.BOUND);
         }
         return array;
+    }
+
+
+    /**
+     * This function will check the printArray function when the input is an empty array
+     */
+    @Test
+    public void printArrayEmptyCheck(){
+        int [] array = {};
+        program.printArr(array);
+        String output = outContent.toString();
+        String base = "\r\n";
+        assertEquals(base,output);
+
     }
 
     /**
@@ -110,89 +124,34 @@ public class printSortedBU {
         return true;
     }
 
-
     /**
-     * This function will check the printSorted function when the input is a null array
+     * This function will check the printArray function when the input is a valid random array
      */
     @Test
-    public void printSortedNull(){
-
-        int [] array = null;
-        program.printSorted(array);
-        String output = outContent.toString();
-        String base = "\r\n";
-        assertEquals("No array"+ base,output);
-
-    }
-    /**
-     * This function will check the printSorted function when the input is an empty array
-     */
-    @Test
-    public void printSortedEmptyCheck(){
-        int [] array = {};
-        program.printSorted(array);
-        String output = outContent.toString();
-        String base = "\r\n";
-        assertEquals(base+base+base,output);
-
-    }
-
-    /**
-     * This function will check the printSorted function when the input is a valid random array
-     */
-    @Test
-    public void printSortedValidCheck(){
-
+    public void printArrayValidCheck(){
         int [] array = randomArray();
-        //int [] array = {2,1};
-        program.printSorted(array);
+        program.printArr(array);
         String output = outContent.toString();
-        String [] tempValues = output.split(" ");
-        assertTrue(tempValues.length%3==1);
-        String [] values = new String[tempValues.length+2];
-        int third = values.length /3;
-        int j=0;
-        for(int i=0;i<values.length;i++)
-        {
-            if(j==third-1 || j == 2*(third-1))
-            {
-                values[i] = "\r\n";
-                values[i+1] = tempValues[j].substring(values[i].length());
-                i++;
-            }
-            else
-            {
-                values[i] = tempValues[j];
+        String [] values = output.split(" ");
+        assertTrue(bagOfStringWords(array,values));
+    }
 
-            }
-            j++;
+    /**
+     * This function will check the printArr function when the input is null
+     */
+    @Test
+    public void printArrNullCheck()
+    {
+        boolean pass = true;
+        try {
+            program.printArr(null);
         }
-
-        assertTrue(values.length%3==0);
-        String [] valuesNotSorted1 = new String[values.length/3];
-        String [] valuesSorted = new String[values.length/3];
-        String [] valuesNotSorted2 = new String[values.length/3];
-
-        for(int i=0;i<valuesNotSorted1.length;i++)
+        catch(Exception e)
         {
-            valuesNotSorted1[i] = values[i];
-            valuesSorted[i] = values[(values.length/3)+i];
-            valuesNotSorted2[i] = values[(2*(values.length/3))+i];
+            pass = false;
+
         }
-
-        assertTrue(bagOfStringWords(array,valuesNotSorted1));
-        assertTrue(bagOfStringWords(array,valuesSorted));
-        assertTrue(bagOfStringWords(array,valuesNotSorted2));
-
-        int num1,num2;
-        for(int i=0;i<valuesSorted.length - 2;i++)//Without '\r\n'
-        {
-            num1 = Integer.parseInt(valuesSorted[i]);
-            num2 = Integer.parseInt(valuesSorted[i+1]);
-            assertTrue(num2>=num1);
-        }
-
-
+        assertTrue(pass);
     }
 
     /**
@@ -203,5 +162,6 @@ public class printSortedBU {
         System.setOut(originalOut);
         System.setErr(originalErr);
     }
+
 
 }

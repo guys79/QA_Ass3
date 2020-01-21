@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 
-public class maxValueIndexBU {
+public class maxValueIndexBottomUp {
     private Program program= new Program();
     private final int BOUND = 100;//The bound
     private Random rand=new Random();// The random variable
