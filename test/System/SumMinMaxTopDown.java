@@ -1,13 +1,15 @@
-package System.buttomUp;
-import System.Program;
+package System;
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+public class SumMinMaxTopDown {
 
-public class sumMinMaxBottomUp {
-    private Program program= new Program();
+
+    private MinValueMaxValueStabSumMinMaxWhenNullAndSumMinMaxWhenEmpty MinValueMaxValueStabSumMinMaxWhenNullAndSumMinMaxWhenEmpty = new MinValueMaxValueStabSumMinMaxWhenNullAndSumMinMaxWhenEmpty();
+    private MinValueMaxValueStabSumMinMaxValidInput MinValueMaxValueStabSumMinMaxValidInput = new MinValueMaxValueStabSumMinMaxValidInput();
 
     /**
      * This function will check the sumMinMax function when the input is null
@@ -19,7 +21,7 @@ public class sumMinMaxBottomUp {
         try
         {
             int [] arr = null;
-            int value = program.sumMinMax(arr);
+            int value = MinValueMaxValueStabSumMinMaxWhenNullAndSumMinMaxWhenEmpty.sumMinMax(arr);
         }
         catch(Exception e)
         {
@@ -38,7 +40,7 @@ public class sumMinMaxBottomUp {
         try
         {
             int [] arr = {};
-            int value = program.sumMinMax(arr);
+            int value = MinValueMaxValueStabSumMinMaxWhenNullAndSumMinMaxWhenEmpty.sumMinMax(arr);
         }
         catch(Exception e)
         {
@@ -54,7 +56,7 @@ public class sumMinMaxBottomUp {
     public void sumMinMaxValidInput()
     {
         int [] arr = {4,3,2,1};
-        int value = program.sumMinMax(arr);
+        int value = MinValueMaxValueStabSumMinMaxValidInput.sumMinMax(arr);
         assertEquals(5,value);
     }
 

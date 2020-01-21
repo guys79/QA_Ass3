@@ -1,15 +1,13 @@
-package System;
-
+package System.buttomUp;
+import System.Program;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class minValueTopDown {
 
-    private MaxValueIndexStabMaxValueWhenNullAndMaxValueValidInputEmpty MaxValueIndexStabMaxValueWhenNullAndMaxValueValidInputEmpty = new MaxValueIndexStabMaxValueWhenNullAndMaxValueValidInputEmpty();
-    private MaxValueIndexStabMaxValueValidInputAndMinValueValidInput MaxValueIndexStabMaxValueValidInputAndMinValueValidInput = new MaxValueIndexStabMaxValueValidInputAndMinValueValidInput();
-
+public class MinValueBottomUp {
+    private Program program= new Program();
     /**
      * This function will check the minValue function when the input is null
      */
@@ -19,7 +17,7 @@ public class minValueTopDown {
         boolean pass = true;
         try
         {
-            MaxValueIndexStabMaxValueWhenNullAndMaxValueValidInputEmpty.minValue(null);
+            program.minValue(null);
         }
         catch(Exception e)
         {
@@ -35,7 +33,7 @@ public class minValueTopDown {
     public void minValueValidInput()
     {
         int [] arr = {4,3,2,1};
-        int value = MaxValueIndexStabMaxValueValidInputAndMinValueValidInput.minValue(arr);
+        int value = program.minValue(arr);
         assertEquals(1,value);
     }
 
@@ -49,7 +47,7 @@ public class minValueTopDown {
         try
         {
             int [] arr = {};
-            int value = MaxValueIndexStabMaxValueWhenNullAndMaxValueValidInputEmpty.minValue(arr);
+            int value = program.minValue(arr);
         }
         catch(Exception e)
         {

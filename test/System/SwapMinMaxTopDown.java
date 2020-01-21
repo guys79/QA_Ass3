@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class swapMinMaxTopDown {
+public class SwapMinMaxTopDown {
     private MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenValidCheckarray minValueIndexCopyArrMaxValueStabSwapMinMaxWhenValidCheckarray = new MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenValidCheckarray();
     private MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenValidCheckarray2 MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenValidCheckarray2 = new MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenValidCheckarray2();
     private MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenNull MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenNull = new MinValueIndexCopyArrMaxValueStabSwapMinMaxWhenNull();

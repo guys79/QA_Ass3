@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 
-public class minValueIndexBottomUp {
+public class MinValueIndexBottomUp {
     private Program program= new Program();
     /**
      * This function will check the minIndexValue function when the input is null

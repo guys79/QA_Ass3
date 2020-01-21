@@ -5,7 +5,7 @@ import java.util.Random;
 
 import static org.junit.Assert.assertTrue;
 
-public class equalArraysBottomUp {
+public class EqualArraysBottomUp {
     private final int BOUND = 100;//The bound
     private Random rand=new Random();// The random variable
     private Program program= new Program();

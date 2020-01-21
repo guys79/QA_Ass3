@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class maxValueIndexTopDown {
+public class MaxValueIndexTopDown {
 
     private SizeStabMaxValueIndexValidCheck SizeStabMaxValueIndexValidCheck = new SizeStabMaxValueIndexValidCheck();
     private SizeStabMaxValueIndexValidEmptyCheckAndCopyArrWhenEnpty SizeStabMaxValueIndexValidEmptyCheckAndCopyArrWhenEnpty = new SizeStabMaxValueIndexValidEmptyCheckAndCopyArrWhenEnpty();

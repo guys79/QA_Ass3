@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 
-public class sizeBottomUp {
+public class SizeBottomUp {
     private Program program= new Program();
     private Random rand=new Random();// The random variable
     private final int BOUND = 100;//The bound

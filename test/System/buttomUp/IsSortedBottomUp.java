@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class isSortedBottomUp {
+public class IsSortedBottomUp {
     private Program program= new Program();
     /**
      * This function will check the isSorted function when the input is null

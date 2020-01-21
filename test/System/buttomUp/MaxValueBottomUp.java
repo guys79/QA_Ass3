@@ -1,15 +1,14 @@
-package System;
+package System.buttomUp;
 
+import System.Program;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class maxValueTopDown {
 
-    private MaxValueIndexStabMaxValueWhenNullAndMaxValueValidInputEmpty MaxValueIndexStabMaxValueWhenNullAndMaxValueValidInputEmpty = new MaxValueIndexStabMaxValueWhenNullAndMaxValueValidInputEmpty();
-    private MaxValueIndexStabMaxValueValidInputAndMinValueValidInput MaxValueIndexStabMaxValueValidInputAndMinValueValidInput = new MaxValueIndexStabMaxValueValidInputAndMinValueValidInput();
-
+public class MaxValueBottomUp {
+    private Program program= new Program();
     /**
      * This function will check the maxValue function when the input is null
      */
@@ -19,7 +18,7 @@ public class maxValueTopDown {
         boolean pass = true;
         try
         {
-            MaxValueIndexStabMaxValueWhenNullAndMaxValueValidInputEmpty.maxValue(null);
+            program.maxValue(null);
         }
         catch(Exception e)
         {
@@ -35,11 +34,9 @@ public class maxValueTopDown {
     public void maxValueValidInput()
     {
         int [] arr = {4,3,2,1};
-        int value = MaxValueIndexStabMaxValueValidInputAndMinValueValidInput.maxValue(arr);
+        int value = program.maxValue(arr);
         assertEquals(4,value);
     }
-
-
 
     /**
      * This function will check the maxValue function when the input is an empty array
@@ -51,7 +48,7 @@ public class maxValueTopDown {
         try
         {
             int [] arr = {};
-            int value = MaxValueIndexStabMaxValueWhenNullAndMaxValueValidInputEmpty.maxValue(arr);
+            int value = program.maxValue(arr);
         }
         catch(Exception e)
         {
